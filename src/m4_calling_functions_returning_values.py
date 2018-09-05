@@ -7,8 +7,8 @@ This module demonstrates and practices:
   -- UNIT TESTING.
 
 Authors: David Mutchler, Dave Fisher, Vibha Alangar, Mark Hays, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and Landon Bundy.
+"""  # TODONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import m4t_tester
 
@@ -38,7 +38,7 @@ def main():
 def run_test_sum_of_digits():
     """ Tests the  sum_of_digits   function. """
     # ------------------------------------------------------------------
-    # TODO: 2. Implement this TEST function, as follows:
+    # TODONE: 2. Implement this TEST function, as follows:
     #
     #  Step 1:  This TEST function tests the  sum_of_digits  function.
     #    So read the doc-string of the  sum_of_digits  function
@@ -65,6 +65,24 @@ def run_test_sum_of_digits():
     # Test 1:
     expected = 16
     answer = sum_of_digits(826)
+    print('Test 1 expected:', expected)
+    print('       actual:  ', answer)
+
+    # Test 2:
+    expected = 7
+    answer = sum_of_digits(25)
+    print('Test 1 expected:', expected)
+    print('       actual:  ', answer)
+
+    # Test 3:
+    expected = 45
+    answer = sum_of_digits(123456789)
+    print('Test 1 expected:', expected)
+    print('       actual:  ', answer)
+
+    # Test 4:
+    expected = 27
+    answer = sum_of_digits(999)
     print('Test 1 expected:', expected)
     print('       actual:  ', answer)
 
@@ -216,6 +234,16 @@ def run_test_fancy_sums_of_digits():
     # in the doc-string to be sure that you understand the specification.
     # ------------------------------------------------------------------
 
+    expected = 1
+    answer = fancy_sums_of_digits(10)
+    print(expected)
+    print(answer)
+
+    expected = 19084
+    answer = fancy_sums_of_digits(2)
+    print(expected)
+    print(answer)
+
 
 def fancy_sums_of_digits(n):
     """
@@ -242,13 +270,17 @@ def fancy_sums_of_digits(n):
             -- so this function returns 124309.
     """
     # ------------------------------------------------------------------
-    # TODO: 8. Implement and test this function.
+    # TODONE: 8. Implement and test this function.
     #
     ####################################################################
     # IMPORTANT: CALL, as many times as needed,
     #    the    sum_of_digits    function that is DEFINED ABOVE.
     ####################################################################
     # ------------------------------------------------------------------
+
+    x = sum_of_digits(n ** 1000)
+    y = sum_of_digits(n ** 999)
+    return sum_of_digits(x ** y)
 
 # ----------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
