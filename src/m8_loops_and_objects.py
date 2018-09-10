@@ -6,8 +6,8 @@ This module demonstrates simple LOOPS of the form:
 and also USING OBJECTS.
 
 Authors: David Mutchler, Dave Fisher, Vibha Alangar, Mark Hays, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and Landon Bundy.
+"""  # TODOne: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import rosegraphics as rg
 
@@ -15,9 +15,16 @@ import rosegraphics as rg
 def main():
     """ Calls the other functions to demonstrate and/or test them. """
     # Test your functions by putting calls to them here:
+    test_print_sequence1()
+    print_sequence1()
+    draw_circles1()
+    draw_circles2()
+    draw_circles3()
+    print_sequence2()
+    print_sequence3()
+    print_cosines()
+    draw_cosines_and_sines()
 
-
-def print_sequence1():
     """
     Prints:
        0
@@ -28,15 +35,42 @@ def print_sequence1():
        ...
        200
     """
+
+
+def test_print_sequence1():
     # ------------------------------------------------------------------
-    # TODO: 2. Implement this function, per its doc-string above.
+    # TODOne: 2. Implement this function, per its doc-string above.
     # Put a statement in  main  to test this function.
     # REQUIREMENT: You must use a   RANGE  statement to solve this problem.
     # ------------------------------------------------------------------
+
     print()
     print('--------------------------------------------------')
     print('Running print_sequence1:')
     print('--------------------------------------------------')
+
+    expected = 10
+    answer = print_sequence1(2)
+    print('Test 1 expected:', expected)
+    print('       actual:  ', answer)
+
+    expected = 30
+    answer = print_sequence1(3)
+    print('Test 1 expected:', expected)
+    print('       actual:  ', answer)
+
+    expected = 60
+    answer = print_sequence1(4)
+    print('Test 1 expected:', expected)
+    print('       actual:  ', answer)
+
+
+def print_sequence1(n):
+    total = 0
+    for k in range(n):
+        total = total + 10 * k
+
+    return total
 
 
 def draw_circles1():
@@ -44,7 +78,7 @@ def draw_circles1():
     -- Constructs an rg.RoseWindow whose width and height are both 400.
     -- Constructs and draws 21 rg.Circle objects such that:
          -- Each is centered at (200, 200)
-         -- They have radii:  0  10  20  30  40 ... 200, respectively.
+         --j They have radii:  0  10  20  30  40 ... 200, respectively.
     -- Waits for the user to press the mouse, then closes the window.
     """
     # ------------------------------------------------------------------
@@ -57,6 +91,10 @@ def draw_circles1():
     print('--------------------------------------------------')
     print('Running draw_circles1:  See graphics window')
     print('--------------------------------------------------')
+
+
+rg.RoseWindow(400, 400)
+draw_circles1()
 
 
 def print_sequence2():
@@ -79,6 +117,28 @@ def print_sequence2():
     print('--------------------------------------------------')
     print('Running print_sequence2:')
     print('--------------------------------------------------')
+
+    expected = 70
+    answer = print_sequence2(2)
+    print('Test 1 expected:', expected)
+    print('       actual:  ', answer)
+
+    expected = 90
+    answer = print_sequence2(3)
+    print('Test 1 expected:', expected)
+    print('       actual:  ', answer)
+
+    expected = 80
+    answer = print_sequence2(4)
+    print('Test 1 expected:', expected)
+    print('       actual:  ', answer)
+
+
+def print_sequence2(n):
+    for k in range(n):
+        total = 50 + 20 * k
+
+    return total
 
 
 def draw_circles2():
@@ -121,6 +181,29 @@ def print_sequence3():
     print('--------------------------------------------------')
     print('Running print_sequence3:')
     print('--------------------------------------------------')
+
+    expected = 10
+    answer = print_sequence3(11)
+    print('Test 1 expected:', expected)
+    print('       actual:  ', answer)
+
+    expected = 30
+    answer = print_sequence3(31)
+    print('Test 1 expected:', expected)
+    print('       actual:  ', answer)
+
+    expected = 60
+    answer = print_sequence3(61)
+    print('Test 1 expected:', expected)
+    print('       actual:  ', answer)
+
+
+def print_sequence3(n):
+    total = 0
+    for k in range(n):
+        total = 1 + k
+
+    return total
 
 
 def draw_circles3():
