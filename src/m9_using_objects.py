@@ -30,15 +30,24 @@ def two_circles():
     -- Waits for the user to press the mouse, then closes the window.
     """
     # ------------------------------------------------------------------
-    # TODO: 2. Implement this function, per its green doc-string above.
+    # TODOne: 2. Implement this function, per its green doc-string above.
     #    -- ANY two rg.Circle objects that meet the criteria are fine.
     #    -- File  COLORS.pdf  lists all legal color-names.
     # Put a statement in   main   to test this function
     #    (by calling this function).
     # ------------------------------------------------------------------
 
+    window = rg.RoseWindow(500, 500)
+    center_point1 = rg.Point(200, 200)
+    center_point2 = rg.Point(100, 100)
+    circle = rg.Circle(center_point1, 10)
+    circle2 = rg.Circle(center_point2, 20)
+    circle.fill_color = 'blue'
+    circle.attach_to(window)
+    circle2.attach_to(window)
+    window.render()
 
-rg.RoseWindow()
+    window.close_on_mouse_click()
 
 
 def circle_and_rectangle():
@@ -81,6 +90,18 @@ def circle_and_rectangle():
     # IMPORTANT: Use the DOT TRICK to guess the names of the relevant
     #       instance variables for outline thickness, etc.
     # ------------------------------------------------------------------
+
+    window = rg.RoseWindow(500, 500)
+    center_point = rg.Point(100, 100)
+    point1 = rg.Point(50, 50)
+    point2 = rg.Point(100, 100)
+    circle = rg.Circle(center_point, 10)
+    rectangle = rg.Rectangle(point1, point2)
+    circle.fill_color = 'blue'
+    circle.attach_to(window)
+    rectangle.attach_to(window)
+    window.render()
+    window.close_on_mouse_click()
 
 
 def lines():
