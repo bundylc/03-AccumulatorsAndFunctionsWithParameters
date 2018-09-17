@@ -315,7 +315,7 @@ def print_cosines():
 def draw_cosines_and_sines():
     window = rg.RoseWindow(400, 400)
 
-    for k in range(100):
+    for k in range(101):
         base = (200 + (80 * math.cos(k)))
         ball = (200 + (80 * math.cos(k)))
         center_point = rg.Point(base, ball)
